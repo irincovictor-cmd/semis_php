@@ -1,4 +1,5 @@
--- user_system.sql
+-- School Management System Database
+-- Import this into MySQL / MariaDB (phpMyAdmin or CLI)
 
 CREATE DATABASE IF NOT EXISTS user_system;
 USE user_system;
@@ -11,6 +12,6 @@ CREATE TABLE IF NOT EXISTS users (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-INSERT INTO users (username, password, role) VALUES
-('admin1', SHA2('admin123', 256), 'admin'),
-('user1', SHA2('user123', 256), 'user');
+-- Note: Accounts should be created via the Sign Up form
+-- so passwords are properly hashed with password_hash().
+-- Do not insert plain SHA2 passwords — login.php uses password_verify().
